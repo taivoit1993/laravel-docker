@@ -1,3 +1,18 @@
-[18-Sep-2022 10:50:33] NOTICE: fpm is running, pid 15
-[18-Sep-2022 10:50:33] NOTICE: ready to handle connections
-[18-Sep-2022 10:50:33] NOTICE: systemd monitor interval set to 10000ms
+[19-Sep-2022 01:33:25] NOTICE: fpm is running, pid 15
+[19-Sep-2022 01:33:25] NOTICE: ready to handle connections
+[19-Sep-2022 01:33:25] NOTICE: systemd monitor interval set to 10000ms
+[19-Sep-2022 01:34:34] WARNING: [pool www] child 25 said into stderr: "NOTICE: PHP message: PHP Warning:  require(/var/www/html/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/html/public/index.php on line 34"
+[19-Sep-2022 01:34:34] WARNING: [pool www] child 25 said into stderr: "NOTICE: PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /var/www/html/public/index.php:34"
+[19-Sep-2022 01:34:34] WARNING: [pool www] child 25 said into stderr: "Stack trace:"
+[19-Sep-2022 01:34:34] WARNING: [pool www] child 25 said into stderr: "#0 {main}"
+[19-Sep-2022 01:34:34] WARNING: [pool www] child 25 said into stderr: "  thrown in /var/www/html/public/index.php on line 34"
+[19-Sep-2022 01:41:11] WARNING: [pool www] child 26 said into stderr: "NOTICE: PHP message: PHP Warning:  require(/var/www/html/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/html/public/index.php on line 34"
+[19-Sep-2022 01:41:11] WARNING: [pool www] child 26 said into stderr: "NOTICE: PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /var/www/html/public/index.php:34"
+[19-Sep-2022 01:41:11] WARNING: [pool www] child 26 said into stderr: "Stack trace:"
+[19-Sep-2022 01:41:11] WARNING: [pool www] child 26 said into stderr: "#0 {main}"
+[19-Sep-2022 01:41:11] WARNING: [pool www] child 26 said into stderr: "  thrown in /var/www/html/public/index.php on line 34"
+[19-Sep-2022 01:41:22] WARNING: [pool www] child 27 said into stderr: "NOTICE: PHP message: PHP Warning:  require(/var/www/html/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/html/public/index.php on line 34"
+[19-Sep-2022 01:41:22] WARNING: [pool www] child 27 said into stderr: "NOTICE: PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /var/www/html/public/index.php:34"
+[19-Sep-2022 01:41:22] WARNING: [pool www] child 27 said into stderr: "Stack trace:"
+[19-Sep-2022 01:41:22] WARNING: [pool www] child 27 said into stderr: "#0 {main}"
+[19-Sep-2022 01:41:22] WARNING: [pool www] child 27 said into stderr: "  thrown in /var/www/html/public/index.php on line 34"

@@ -1,31 +1,26 @@
-2022/09/18 10:50:33 [notice] 16#16: using the "epoll" event method
-2022/09/18 10:50:33 [notice] 16#16: nginx/1.21.6
-2022/09/18 10:50:33 [notice] 16#16: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
-2022/09/18 10:50:33 [notice] 16#16: OS: Linux 5.10.16.3-microsoft-standard-WSL2
-2022/09/18 10:50:33 [notice] 16#16: getrlimit(RLIMIT_NOFILE): 1048576:1048576
-2022/09/18 10:50:33 [notice] 16#16: start worker processes
-2022/09/18 10:50:33 [notice] 16#16: start worker process 17
-2022/09/18 10:50:33 [notice] 16#16: start worker process 18
-2022/09/18 10:50:33 [notice] 16#16: start worker process 19
-2022/09/18 10:50:33 [notice] 16#16: start worker process 20
-2022/09/18 10:50:33 [notice] 16#16: start worker process 21
-2022/09/18 10:50:33 [notice] 16#16: start worker process 22
-2022/09/18 10:50:33 [notice] 16#16: start worker process 23
-2022/09/18 10:50:33 [notice] 16#16: start worker process 24
-2022/09/18 10:50:33 [notice] 16#16: start worker process 25
-2022/09/18 10:50:33 [notice] 16#16: start worker process 26
-2022/09/18 10:50:33 [notice] 16#16: start worker process 27
-2022/09/18 10:50:33 [notice] 16#16: start worker process 28
-2022/09/18 10:50:33 [notice] 16#16: start worker process 29
-2022/09/18 10:50:33 [notice] 16#16: start worker process 30
-2022/09/18 10:50:33 [notice] 16#16: start worker process 31
-2022/09/18 10:50:33 [notice] 16#16: start worker process 32
-2022/09/18 10:50:51 [error] 17#17: *2 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.22.0.1, server: miduner.local, request: "GET / HTTP/1.1", host: "localhost"
-2022/09/18 11:00:12 [error] 18#18: *4 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.22.0.1, server: miduner.local, request: "GET / HTTP/1.1", host: "localhost"
-2022/09/18 11:00:14 [error] 18#18: *3 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.22.0.1, server: miduner.local, request: "GET / HTTP/1.1", host: "localhost"
-2022/09/18 11:00:30 [error] 19#19: *5 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.22.0.1, server: miduner.local, request: "GET / HTTP/1.1", host: "localhost"
-2022/09/18 11:00:31 [error] 20#20: *6 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.22.0.1, server: miduner.local, request: "GET / HTTP/1.1", host: "localhost"
-2022/09/18 11:00:31 [error] 21#21: *7 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.22.0.1, server: miduner.local, request: "GET / HTTP/1.1", host: "localhost"
-2022/09/18 11:00:31 [error] 22#22: *8 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.22.0.1, server: miduner.local, request: "GET / HTTP/1.1", host: "localhost"
-2022/09/18 11:00:32 [error] 23#23: *9 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.22.0.1, server: miduner.local, request: "GET / HTTP/1.1", host: "localhost"
-2022/09/18 11:01:04 [error] 24#24: *10 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 172.22.0.1, server: miduner.local, request: "GET / HTTP/1.1", host: "localhost"
+2022/09/19 01:33:25 [notice] 16#16: using the "epoll" event method
+2022/09/19 01:33:25 [notice] 16#16: nginx/1.21.6
+2022/09/19 01:33:25 [notice] 16#16: built by gcc 10.2.1 20210110 (Debian 10.2.1-6) 
+2022/09/19 01:33:25 [notice] 16#16: OS: Linux 5.10.16.3-microsoft-standard-WSL2
+2022/09/19 01:33:25 [notice] 16#16: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2022/09/19 01:33:25 [notice] 16#16: start worker processes
+2022/09/19 01:33:25 [notice] 16#16: start worker process 17
+2022/09/19 01:33:25 [notice] 16#16: start worker process 18
+2022/09/19 01:33:25 [notice] 16#16: start worker process 19
+2022/09/19 01:33:25 [notice] 16#16: start worker process 20
+2022/09/19 01:33:25 [notice] 16#16: start worker process 21
+2022/09/19 01:33:25 [notice] 16#16: start worker process 22
+2022/09/19 01:33:25 [notice] 16#16: start worker process 23
+2022/09/19 01:33:25 [notice] 16#16: start worker process 24
+2022/09/19 01:34:34 [error] 18#18: *2 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/html/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/html/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /var/www/html/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 34" while reading response header from upstream, client: 172.19.0.1, server: miduner.local, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php8.1-fpm.sock:", host: "localhost"
+2022/09/19 01:41:11 [error] 20#20: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/html/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/html/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /var/www/html/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 34" while reading response header from upstream, client: 172.19.0.1, server: miduner.local, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php8.1-fpm.sock:", host: "laravel.local"
+2022/09/19 01:41:22 [error] 19#19: *4 FastCGI sent in stderr: "PHP message: PHP Warning:  require(/var/www/html/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /var/www/html/public/index.php on line 34PHP message: PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/html/public/../vendor/autoload.php' (include_path='.:/usr/share/php') in /var/www/html/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/public/index.php on line 34" while reading response header from upstream, client: 172.19.0.1, server: miduner.local, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php8.1-fpm.sock:", host: "laravel.local"

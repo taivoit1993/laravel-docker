@@ -18,7 +18,9 @@ class RegisterController extends ParentController{
     }
 
     /**
-     * register api
+     * Register api
+     * @property App\Http\Requests\Auth\RegisterRequest
+     * @package App\Repository\Auth\AuthRepository
      * @return Illuminate\Http\Response
      */
     public function register(RegisterRequest $request){
@@ -27,10 +29,15 @@ class RegisterController extends ParentController{
     }
 
     /**
-     * login api
+     * Login api
+     * @property App\Http\Requests\Auth\LoginRequest
+     * @package App\Repository\Auth\AuthRepository
      * @return Illuminate\Http\Response
      */
     public function login(LoginRequest $request){
-        $this->authRepository->login($request->all());
+        if($success = $this->authRepository->login($request->all())){
+            return $this->sendResponse($success, 'User login successfully.');
+        }
+        return $this->sendErrorUnauthorised();
     }
 }

@@ -1,11 +1,13 @@
 <?php
+
 namespace App\Repository\Auth;
 
 use App\Models\User;
 use App\Repository\BaseRepository;
 use Illuminate\Support\Facades\Auth;
 
-class AuthRepository extends BaseRepository implements AuthInterface{
+class AuthRepository extends BaseRepository implements AuthInterface
+{
 
     public function register($attribute = [])
     {
@@ -18,14 +20,15 @@ class AuthRepository extends BaseRepository implements AuthInterface{
 
     public function login($attribute = [])
     {
-        if(Auth::attempt(['email' => $attribute['email'], 'password' => $attribute['password']])){
+        if (Auth::attempt(['email' => $attribute['email'], 'password' => $attribute['password']], $attribute['remember_me'] ?? 0)) {
             $user = Auth::user();
             $success['token'] =  $user->createToken('MyApp')->accessToken;
+            $success['remember_token'] = $user->getRememberToken();
             $success['name'] =  $user->name;
-            return $this->sendResponse($success, 'User login successfully.');
-        }
-        else{
-            return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
+            $success['roles'] = $user->roles;
+            return $success;
+        } else {
+            return null;
         }
     }
 

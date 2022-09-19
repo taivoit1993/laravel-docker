@@ -37,4 +37,12 @@ class ParentController extends Controller{
 
         return response()->json($response, $code);
     }
+
+    public function sendErrorUnauthorised($code=401){
+        $response = [
+            'success' => false,
+            'message' => "Unauthorised"
+        ];
+        return response()->json($response, $code);
+    }
 }

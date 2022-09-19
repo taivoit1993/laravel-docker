@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Content;
 
 use App\Http\Controllers\ParentController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class PostController extends ParentController
 {
@@ -15,7 +16,15 @@ class PostController extends ParentController
     public function index()
     {
         //
-        return $this->sendResponse([], 'This is test success!');
+        $redis = Redis::connection();
+        // dd($redis->get('name'));
+        dd($redis->keys('*'));
+        $redis->set('name','test');
+        if($redis->ping()){
+            return $this->sendResponse([], 'Connection Redis success');
+        }else{
+            return $this->sendResponse([], 'Fails connection');
+        }
     }
 
     /**

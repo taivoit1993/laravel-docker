@@ -2,6 +2,7 @@ version: '3.7'
 services:
   nginx:
     build: ./docker
+    container_name: laravel_server
     working_dir: '/var/www/html'
     ports:
       - 80:80
@@ -22,7 +23,18 @@ services:
     volumes:
       - ./docker/mysql:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: password 
+      MYSQL_ROOT_PASSWORD: password
+  redis:
+    build: ./docker/myredis
+    container_name: redis
+    restart: unless-stopped
+    volumes:
+      - ./docker/myredis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./docker/myredis/data:/data
+    ports:
+      - "6379:6379"
+    networks:
+      - test-network
 
 networks:
   test-network:

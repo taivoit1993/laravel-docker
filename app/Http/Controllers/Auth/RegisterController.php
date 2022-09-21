@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\ParentController;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
-
+use App\Jobs\ExampleJobs;
 use App\Models\User;
 use App\Repository\Auth\AuthInterface;
 use Illuminate\Support\Facades\Auth;
@@ -35,6 +35,7 @@ class RegisterController extends ParentController{
      * @return Illuminate\Http\Response
      */
     public function login(LoginRequest $request){
+        ExampleJobs::dispatch();
         if($success = $this->authRepository->login($request->all())){
             return $this->sendResponse($success, 'User login successfully.');
         }
